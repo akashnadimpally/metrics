@@ -15,17 +15,20 @@ response = client.recommendations.generate()
 
 print(response)
 
-recommendations = client.recommendations.list(
-    scope=resource_uri
-)
+recommendations = client.AdvisorManagementClient
 
-# Process the recommendations
-for recommendation in recommendations:
-    print(f"Recommendation ID: {recommendation.id}")
-    print(f"Recommendation Name: {recommendation.name}")
-    print(f"Recommended Action: {recommendation.properties.recommended_action}")
-    print(f"Estimated Monthly Savings: {recommendation.properties.estimated_monthly_savings.amount} {recommendation.properties.estimated_monthly_savings.currency}")
-    print("------")
+
+# recommendations = client.recommendations.list(
+#     scope=resource_uri
+# )
+
+# # Process the recommendations
+# for recommendation in recommendations:
+#     print(f"Recommendation ID: {recommendation.id}")
+#     print(f"Recommendation Name: {recommendation.name}")
+#     print(f"Recommended Action: {recommendation.properties.recommended_action}")
+#     print(f"Estimated Monthly Savings: {recommendation.properties.estimated_monthly_savings.amount} {recommendation.properties.estimated_monthly_savings.currency}")
+#     print("------")
 
 
 # recommendations = client.recommendations.get_resource_recommendations(
